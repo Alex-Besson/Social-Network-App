@@ -22,10 +22,11 @@
 		FA18CF901BF674BD004D5EFA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18CF8F1BF674BD004D5EFA /* MaterialView.swift */; };
 		FA18CF931BF6752D004D5EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18CF921BF6752D004D5EFA /* Constants.swift */; };
 		FA18CF951BF67977004D5EFA /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18CF941BF67977004D5EFA /* MaterialButton.swift */; };
-		FA18CF971BF67D7A004D5EFA /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18CF961BF67D7A004D5EFA /* MaterialTextField.swift */; };
 		FA18CF9B1BF68507004D5EFA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA18CF981BF68507004D5EFA /* Bolts.framework */; };
 		FA18CF9C1BF68507004D5EFA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA18CF991BF68507004D5EFA /* FBSDKCoreKit.framework */; };
 		FA18CF9D1BF68507004D5EFA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA18CF9A1BF68507004D5EFA /* FBSDKLoginKit.framework */; };
+		FA497E741BF7A574009B5702 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA497E731BF7A574009B5702 /* MaterialTextField.swift */; };
+		FAE66CAA1BF7995500C703FB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE66CA91BF7995500C703FB /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,11 @@
 		FA18CF8F1BF674BD004D5EFA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		FA18CF921BF6752D004D5EFA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA18CF941BF67977004D5EFA /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
-		FA18CF961BF67D7A004D5EFA /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		FA18CF981BF68507004D5EFA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
 		FA18CF991BF68507004D5EFA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FA18CF9A1BF68507004D5EFA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FA497E731BF7A574009B5702 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		FAE66CA91BF7995500C703FB /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		FA18CF531BF64041004D5EFA /* Social Network App */ = {
 			isa = PBXGroup;
 			children = (
+				FAE66CA81BF7994300C703FB /* Services */,
 				FA18CF9E1BF6851B004D5EFA /* Frameworks */,
 				FA18CF911BF6751D004D5EFA /* Utilities */,
 				FA18CF861BF6412B004D5EFA /* Resources */,
@@ -192,7 +195,7 @@
 			children = (
 				FA18CF8F1BF674BD004D5EFA /* MaterialView.swift */,
 				FA18CF941BF67977004D5EFA /* MaterialButton.swift */,
-				FA18CF961BF67D7A004D5EFA /* MaterialTextField.swift */,
+				FA497E731BF7A574009B5702 /* MaterialTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,6 +234,14 @@
 				FA18CF9A1BF68507004D5EFA /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAE66CA81BF7994300C703FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAE66CA91BF7995500C703FB /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,12 +430,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA18CF971BF67D7A004D5EFA /* MaterialTextField.swift in Sources */,
+				FAE66CAA1BF7995500C703FB /* DataService.swift in Sources */,
 				FA18CF901BF674BD004D5EFA /* MaterialView.swift in Sources */,
 				FA18CF571BF64041004D5EFA /* ViewController.swift in Sources */,
 				FA18CF551BF64041004D5EFA /* AppDelegate.swift in Sources */,
 				FA18CF931BF6752D004D5EFA /* Constants.swift in Sources */,
 				FA18CF951BF67977004D5EFA /* MaterialButton.swift in Sources */,
+				FA497E741BF7A574009B5702 /* MaterialTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

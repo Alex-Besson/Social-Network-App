@@ -14,8 +14,6 @@
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
-            <string>NotoSans</string>
-            <string>NotoSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -74,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                                 <animations/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-kf-42O" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-kf-42O" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="38" width="415" height="33"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.53333333333333333" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,28 +120,6 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2s-IB-7ix" customClass="MaterialTextField" customModule="Social_Network_App" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="64" width="520" height="35"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="5w3-Gn-6Ra"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-Tm-U55" customClass="MaterialTextField" customModule="Social_Network_App" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="119" width="520" height="35"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="yQ9-OV-Qme"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yH-LK-ofl" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
                                         <rect key="frame" x="180" y="204" width="200" height="33"/>
                                         <animations/>
@@ -156,22 +132,45 @@
                                         <state key="normal" title="Login / Sign Up">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnAttemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fU-Gr-D36"/>
+                                        </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifi-K1-tOD" customClass="MaterialTextField" customModule="Social_Network_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="64" width="520" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="P0B-6K-8xd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cy5-XL-Dq9" customClass="MaterialTextField" customModule="Social_Network_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="114" width="520" height="30"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ema-Oe-bJp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="BAY-Tm-U55" firstAttribute="leading" secondItem="9sm-MJ-xqx" secondAttribute="leading" constant="20" id="3zP-bs-eO6"/>
-                                    <constraint firstItem="Q2s-IB-7ix" firstAttribute="top" secondItem="Jfa-XT-bb8" secondAttribute="bottom" constant="20" id="66h-6q-aP8"/>
-                                    <constraint firstItem="BAY-Tm-U55" firstAttribute="top" secondItem="Q2s-IB-7ix" secondAttribute="bottom" constant="20" id="82u-ss-LGg"/>
+                                    <constraint firstItem="cy5-XL-Dq9" firstAttribute="leading" secondItem="9sm-MJ-xqx" secondAttribute="leading" constant="20" id="3dk-uv-4Nh"/>
+                                    <constraint firstAttribute="trailing" secondItem="cy5-XL-Dq9" secondAttribute="trailing" constant="20" id="8dA-cP-oua"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ifi-K1-tOD" secondAttribute="trailing" constant="20" id="MMM-TI-xeq"/>
                                     <constraint firstAttribute="height" constant="128" id="Npl-Li-eyS"/>
                                     <constraint firstItem="Jfa-XT-bb8" firstAttribute="leading" secondItem="9sm-MJ-xqx" secondAttribute="leading" constant="20" id="QWE-yO-QnZ"/>
                                     <constraint firstItem="Jfa-XT-bb8" firstAttribute="top" secondItem="9sm-MJ-xqx" secondAttribute="top" constant="20" id="UsT-Qs-KL5"/>
-                                    <constraint firstAttribute="trailing" secondItem="BAY-Tm-U55" secondAttribute="trailing" constant="20" id="WoM-rV-RYu"/>
-                                    <constraint firstItem="5yH-LK-ofl" firstAttribute="top" secondItem="BAY-Tm-U55" secondAttribute="bottom" constant="50" id="XrO-bE-5sE"/>
+                                    <constraint firstItem="5yH-LK-ofl" firstAttribute="top" secondItem="cy5-XL-Dq9" secondAttribute="bottom" constant="60" id="VNS-Xq-g5J"/>
                                     <constraint firstItem="5yH-LK-ofl" firstAttribute="centerX" secondItem="9sm-MJ-xqx" secondAttribute="centerX" id="Za4-ux-hEp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q2s-IB-7ix" secondAttribute="trailing" constant="20" id="mJY-Ue-nY2"/>
-                                    <constraint firstItem="Q2s-IB-7ix" firstAttribute="leading" secondItem="9sm-MJ-xqx" secondAttribute="leading" constant="20" id="wZC-gX-YZa"/>
+                                    <constraint firstItem="Ifi-K1-tOD" firstAttribute="top" secondItem="Jfa-XT-bb8" secondAttribute="bottom" constant="20" id="cZB-jO-FaO"/>
+                                    <constraint firstItem="Ifi-K1-tOD" firstAttribute="leading" secondItem="9sm-MJ-xqx" secondAttribute="leading" constant="20" id="p4L-1d-ur8"/>
+                                    <constraint firstItem="cy5-XL-Dq9" firstAttribute="top" secondItem="Ifi-K1-tOD" secondAttribute="bottom" constant="20" id="zfk-2d-kWw"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -195,6 +194,11 @@
                             <constraint firstItem="dDA-ea-4ID" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vu5-PU-hm3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Ifi-K1-tOD" id="fjm-9W-ReD"/>
+                        <outlet property="txtPassword" destination="cy5-XL-Dq9" id="mbe-Cn-BY1"/>
+                        <segue destination="40q-ep-zg6" kind="show" identifier="loggedIn" id="tqx-3i-Irp"/>
+                    </connections>
                 </viewController>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" id="Kfl-Nm-nRa">
                     <rect key="frame" x="0.0" y="0.0" width="520" height="108"/>
@@ -204,7 +208,7 @@
                             <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                             <animations/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urr-t3-cfl" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urr-t3-cfl" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
                             <rect key="frame" x="105" y="38" width="415" height="33"/>
                             <animations/>
                             <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,6 +223,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="353"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d5w-ca-xdt">
+            <objects>
+                <viewController id="40q-ep-zg6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V40-Oy-A81"/>
+                        <viewControllerLayoutGuide type="bottom" id="PMu-zB-HPk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3B-Id-lfK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.25882352939999997" green="0.37254901959999998" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQS-wo-vjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="353"/>
         </scene>
     </scenes>
     <resources>

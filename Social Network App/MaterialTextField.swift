@@ -2,7 +2,7 @@
 //  MaterialTextField.swift
 //  Social Network App
 //
-//  Created by Alexander Besson on 2015-11-13.
+//  Created by Alexander Besson on 2015-11-14.
 //  Copyright © 2015 Alexander Besson. All rights reserved.
 //
 
@@ -17,10 +17,11 @@ class MaterialTextField: UITextField {
     }
     
     override func textRectForBounds(bounds: CGRect) -> CGRect {
-        return CGRectInset(self.bounds, 10, 0)
+        return CGRectInset(bounds, 10, 0)
     }
     
     override func editingRectForBounds(bounds: CGRect) -> CGRect {
-        return CGRectInset(self.bounds, 10, 0)
+        return CGRectInset(bounds, 10, 0)
     }
+
 }

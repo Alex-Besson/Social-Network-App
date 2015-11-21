@@ -16,8 +16,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
-       
+        
+        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            self.tableView.reloadData()
+        })
+    
     }
 
     override func didReceiveMemoryWarning() {

@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Social Network App' do
 pod 'Firebase', '>= 2.4.2'
+pod 'Alamofire', '~> 3.0'
 end
 
 target 'Social Network AppTests' do

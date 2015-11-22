@@ -26,6 +26,7 @@
 		FA18CF9C1BF68507004D5EFA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA18CF991BF68507004D5EFA /* FBSDKCoreKit.framework */; };
 		FA18CF9D1BF68507004D5EFA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA18CF9A1BF68507004D5EFA /* FBSDKLoginKit.framework */; };
 		FA497E741BF7A574009B5702 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA497E731BF7A574009B5702 /* MaterialTextField.swift */; };
+		FA5D0DF41C001AB100F5A418 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D0DF31C001AB100F5A418 /* Post.swift */; };
 		FAA2FB3F1BF7BD6F00748D4A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FB3E1BF7BD6F00748D4A /* FeedViewController.swift */; };
 		FAA2FB411BF7BE2300748D4A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2FB401BF7BE2300748D4A /* PostCell.swift */; };
 		FAE66CAA1BF7995500C703FB /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE66CA91BF7995500C703FB /* DataService.swift */; };
@@ -76,6 +77,7 @@
 		FA18CF991BF68507004D5EFA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		FA18CF9A1BF68507004D5EFA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		FA497E731BF7A574009B5702 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		FA5D0DF31C001AB100F5A418 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FAA2FB3E1BF7BD6F00748D4A /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FAA2FB401BF7BE2300748D4A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		FAE66CA91BF7995500C703FB /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		FA18CF851BF64120004D5EFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D0DF31C001AB100F5A418 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				FA18CF951BF67977004D5EFA /* MaterialButton.swift in Sources */,
 				FAA2FB3F1BF7BD6F00748D4A /* FeedViewController.swift in Sources */,
 				FA497E741BF7A574009B5702 /* MaterialTextField.swift in Sources */,
+				FA5D0DF41C001AB100F5A418 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

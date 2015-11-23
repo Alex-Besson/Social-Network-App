@@ -9,11 +9,24 @@
 import UIKit
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
     static var imageCache = NSCache()
+    
+    var imagePicker: UIImagePickerController!
+    
+    @IBOutlet weak var txtPostField: MaterialTextField!
+    
+    @IBOutlet weak var imgCameraImage: UIImageView!
+    
+    @IBAction func gestureTapCamera(sender: UITapGestureRecognizer) {
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func btnPost(sender: AnyObject) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +34,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         
         tableView.estimatedRowHeight = 358
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
@@ -42,6 +58,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tableView.reloadData()
         })
     
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

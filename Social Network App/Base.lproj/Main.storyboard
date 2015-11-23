@@ -12,8 +12,10 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -240,13 +242,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-Gh-8lu" customClass="MaterialView" customModule="Social_Network_App" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YZa-U4-gI0">
+                                        <rect key="frame" x="8" y="9" width="544" height="31"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-8i-eef" customClass="MaterialTextField" customModule="Social_Network_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="438" height="31"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="xP1-V1-gFA">
+                                                <rect key="frame" x="448" y="0.0" width="36" height="31"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="Ea9-9P-6ic"/>
+                                                    <constraint firstAttribute="width" constant="36" id="apE-Z3-81N"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="jRK-b1-19I" appends="YES" id="gbY-La-KlF"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3m-Ox-Abv" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
+                                                <rect key="frame" x="494" y="0.0" width="50" height="31"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.0" green="0.70588235294117641" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="RxE-f8-Q6i"/>
+                                                    <constraint firstAttribute="width" constant="50" id="foh-9G-rT1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="POST">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnPost:" destination="40q-ep-zg6" eventType="touchUpInside" id="vVf-Pe-U4w"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="8wG-i4-ysc"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="YZa-U4-gI0" secondAttribute="trailing" id="Zue-Ty-Prg"/>
+                                    <constraint firstItem="YZa-U4-gI0" firstAttribute="top" secondItem="cHC-Gh-8lu" secondAttribute="topMargin" id="abM-Zg-3oS"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="YZa-U4-gI0" secondAttribute="bottom" id="k6D-rw-CVy"/>
+                                    <constraint firstItem="YZa-U4-gI0" firstAttribute="leading" secondItem="cHC-Gh-8lu" secondAttribute="leadingMargin" id="lGm-1h-4fR"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="367" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ipr-1q-Axg">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="127" width="560" height="473"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="Ert-ak-i99" customClass="PostCell" customModule="Social_Network_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="367"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ert-ak-i99" id="169-px-SzN">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="367"/>
@@ -256,10 +312,10 @@
                                                     <rect key="frame" x="0.0" y="8" width="382" height="350.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-9D-nkO">
-                                                            <rect key="frame" x="8" y="8" width="304" height="335"/>
+                                                            <rect key="frame" x="8" y="8" width="374" height="335"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yby-pn-dci">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="63"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1437" translatesAutoresizingMaskIntoConstraints="NO" id="Ejs-sX-Cyk">
                                                                             <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
@@ -270,7 +326,7 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="iMi-ir-Kwx">
-                                                                            <rect key="frame" x="73" y="20" width="0.0" height="24"/>
+                                                                            <rect key="frame" x="73" y="20" width="200" height="24"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="4GC-H5-9Nc"/>
@@ -281,7 +337,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="dNn-Vu-j5l">
-                                                                            <rect key="frame" x="83" y="0.0" width="81" height="63"/>
+                                                                            <rect key="frame" x="283" y="0.0" width="81" height="63"/>
                                                                             <animations/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="81" id="0qf-Sm-82Q"/>
@@ -289,10 +345,10 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RCx-2w-fd0">
-                                                                            <rect key="frame" x="174" y="8" width="130" height="48"/>
+                                                                            <rect key="frame" x="374" y="8" width="0.0" height="48"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-Gp-BBx">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="24"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="199" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-Gp-BBx">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="24"/>
                                                                                     <animations/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="24" id="8JT-af-aLF"/>
@@ -302,8 +358,8 @@
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM5-jJ-dlg">
-                                                                                    <rect key="frame" x="0.0" y="24" width="130" height="24"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM5-jJ-dlg">
+                                                                                    <rect key="frame" x="0.0" y="24" width="0.0" height="24"/>
                                                                                     <animations/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="130" id="0nE-4g-psj"/>
@@ -323,7 +379,7 @@
                                                                     <animations/>
                                                                 </stackView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VrD-Jz-4f1">
-                                                                    <rect key="frame" x="0.0" y="71" width="304" height="70"/>
+                                                                    <rect key="frame" x="0.0" y="71" width="374" height="70"/>
                                                                     <animations/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -335,7 +391,7 @@
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-Rd-tIO">
-                                                                    <rect key="frame" x="0.0" y="149" width="304" height="186"/>
+                                                                    <rect key="frame" x="0.0" y="149" width="374" height="186"/>
                                                                     <animations/>
                                                                 </imageView>
                                                             </subviews>
@@ -384,15 +440,31 @@
                             <constraint firstItem="PMu-zB-HPk" firstAttribute="top" secondItem="Ipr-1q-Axg" secondAttribute="bottom" id="3fc-RT-GPv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ipr-1q-Axg" secondAttribute="trailing" id="4qw-B1-Zg7"/>
                             <constraint firstItem="Ipr-1q-Axg" firstAttribute="leading" secondItem="v3B-Id-lfK" secondAttribute="leadingMargin" id="DyY-e4-Vu8"/>
+                            <constraint firstItem="cHC-Gh-8lu" firstAttribute="trailing" secondItem="v3B-Id-lfK" secondAttribute="trailingMargin" id="Err-F0-0E0"/>
                             <constraint firstItem="Ipr-1q-Axg" firstAttribute="top" secondItem="V40-Oy-A81" secondAttribute="bottom" id="PNA-BA-7Zc"/>
+                            <constraint firstItem="cHC-Gh-8lu" firstAttribute="top" secondItem="V40-Oy-A81" secondAttribute="bottom" constant="8" id="WEE-e2-am0"/>
+                            <constraint firstItem="Ipr-1q-Axg" firstAttribute="top" secondItem="cHC-Gh-8lu" secondAttribute="bottom" constant="8" id="x4v-dj-nog"/>
+                            <constraint firstItem="cHC-Gh-8lu" firstAttribute="leading" secondItem="v3B-Id-lfK" secondAttribute="leadingMargin" id="xhC-3i-WGH"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PNA-BA-7Zc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rWq-LR-kgY"/>
                     <connections>
+                        <outlet property="imgCameraImage" destination="xP1-V1-gFA" id="Wct-Zf-epa"/>
                         <outlet property="tableView" destination="Ipr-1q-Axg" id="Zzb-TE-50p"/>
+                        <outlet property="txtPostField" destination="3RB-8i-eef" id="rVH-Yc-RKY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQS-wo-vjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jRK-b1-19I">
+                    <connections>
+                        <action selector="gestureTapCamera:" destination="40q-ep-zg6" id="u2u-EX-5hO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1833" y="353"/>
         </scene>
@@ -419,6 +491,7 @@
     </scenes>
     <resources>
         <image name="IMG_1437" width="850" height="855"/>
+        <image name="camera" width="50" height="50"/>
         <image name="code-icon-logo" width="318" height="281"/>
         <image name="fb-icon" width="65" height="65"/>
         <image name="heart-empty" width="150" height="147"/>

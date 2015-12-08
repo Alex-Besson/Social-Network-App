@@ -78,7 +78,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                                 <animations/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-kf-42O" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-kf-42O" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="38" width="415" height="33"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.53333333333333333" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,7 +214,7 @@
                             <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                             <animations/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urr-t3-cfl" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urr-t3-cfl" customClass="MaterialButton" customModule="Social_Network_App" customModuleProvider="target">
                             <rect key="frame" x="105" y="38" width="415" height="33"/>
                             <animations/>
                             <color key="backgroundColor" red="0.1176470588" green="0.53333333329999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -425,6 +425,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="imgHeart" destination="dNn-Vu-j5l" id="ejS-wo-GJ4"/>
                                             <outlet property="imgProfile" destination="Ejs-sX-Cyk" id="p52-Sk-Zno"/>
                                             <outlet property="imgShowcase" destination="UBb-Rd-tIO" id="KpE-gq-XlS"/>
                                             <outlet property="lblLikes" destination="stI-Gp-BBx" id="kpc-TY-LzJ"/>
